@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 360" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
+<title id="title">Coach Pixel</title>
+<desc id="desc">Friendly pixel-art racing coach in a violet cap and jacket, smiling and holding a race clipboard.</desc>
+<defs>
+ <linearGradient id="jacket" x2="0" y2="1"><stop stop-color="#9d63ef"/><stop offset="1" stop-color="#6235b6"/></linearGradient>
+ <linearGradient id="skin" x2="0" y2="1"><stop stop-color="#ffe8d2"/><stop offset="1" stop-color="#f2bc9e"/></linearGradient>
+</defs>
+<ellipse cx="160" cy="344" rx="112" ry="12" fill="#10223d" opacity=".32"/>
+<!-- Hair and face -->
+<path d="M66 142V90h18V65h26V47h100v18h26v27h18v105h-18v27h-25v20H91v-20H66v-30H48v-89z" fill="#29233a"/>
+<path d="M79 118h21v54H79zM220 118h21v54h-21z" fill="url(#skin)" stroke="#29233a" stroke-width="6"/>
+<path d="M99 100h122v18h17v91h-17v19H99v-19H82v-91h17z" fill="url(#skin)" stroke="#29233a" stroke-width="6"/>
+<path d="M104 119h111v15h15v70h-15v17H105v-17H91v-70h13z" fill="#ffe2cb"/>
+<path d="M111 153h35v-8h14v8h-14v8h-35zM174 151h33v10h-33z" fill="#3a2a3a"/>
+<rect x="119" y="164" width="21" height="27" fill="#fff"/><rect x="181" y="164" width="21" height="27" fill="#fff"/>
+<rect x="127" y="169" width="11" height="19" fill="#376596"/><rect x="188" y="169" width="11" height="19" fill="#376596"/>
+<rect x="130" y="169" width="5" height="6" fill="#fff"/><rect x="191" y="169" width="5" height="6" fill="#fff"/>
+<path d="M156 181h12v19h-12v8h-10v-8h10z" fill="#e7a58d"/>
+<path d="M133 210h15v7h25v-7h16v16h-13v8h-30v-8h-13z" fill="#552c45"/>
+<path d="M148 210h25v7h-25z" fill="#fff"/>
+<rect x="99" y="194" width="20" height="10" fill="#f3b3a5"/><rect x="202" y="194" width="18" height="10" fill="#f3b3a5"/>
+<!-- Cap -->
+<path d="M67 106V78h19V53h26V36h96v17h26v25h20v28z" fill="#59349f" stroke="#28213b" stroke-width="7"/>
+<path d="M88 61h26V47h88v14h20v25H88z" fill="#9562e5"/>
+<path d="M57 101h220v20H57z" fill="#42277f" stroke="#28213b" stroke-width="7"/>
+<path d="M144 56h32v7h-12v16h-9V63h-11z" fill="#fff1a6"/>
+<!-- Jacket, collar and shirt -->
+<path d="M81 259h34v-20h90v20h34v17h25v77H56v-77h25z" fill="url(#jacket)" stroke="#28213b" stroke-width="8"/>
+<path d="M116 244h25l19 28-23 23-25-24zM205 244h-24l-21 28 24 23 25-24z" fill="#bd9aff" stroke="#42277f" stroke-width="5"/>
+<path d="M141 249h38v104h-38z" fill="#f6f2e8"/>
+<path d="M150 274h20v14h-20zM154 300h12v12h-12z" fill="#6035ac"/>
+<path d="M92 271h26v66H92zM202 271h26v66h-26z" fill="#7542c4"/>
+<!-- Clipboard and welcoming gesture -->
+<path d="M48 274h53v70H48z" fill="#a96b38" stroke="#392a42" stroke-width="6"/>
+<path d="M56 282h37v53H56z" fill="#e9f2f5"/>
+<path d="M64 292h20v5H64zM64 305h5v20h-5zM76 301h6v24h-6z" fill="#45a7a5"/>
+<path d="M225 270h24v18h18v31h-18v15h-24v-22h13v-24h-13z" fill="#7542c4" stroke="#28213b" stroke-width="5"/>
+<path d="M252 280h19v-14h14v15h-15v13h-18z" fill="url(#skin)" stroke="#a86453" stroke-width="4"/>
+<path d="M154 243h12v22h-12z" fill="none" stroke="#f4d45a" stroke-width="4"/>
+<rect x="150" y="261" width="20" height="18" rx="3" fill="#ffd95b" stroke="#77561a" stroke-width="3"/>
+</svg>

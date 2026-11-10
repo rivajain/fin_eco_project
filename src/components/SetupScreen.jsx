@@ -1,0 +1,4 @@
+import React from "react";
+export default function SetupScreen({ticker,setTicker,model,setModel,tickers,models,onTutorial,onStart,onBack}){
+ return <div className="setup-overlay"><section className="arcade-setup"><header><small>COACH PIXEL’S STARTING GATE</small><h1>SET YOUR RACE</h1><p>Choose your ticker and which model you’d like Coach to explain first.</p></header><label>MARKET TICKER<select value={ticker} onChange={e=>setTicker(e.target.value)}>{tickers.map(([t,n])=><option key={t} value={t}>{t} — {n}</option>)}</select></label><label>MODEL TO LEARN FIRST<select value={model} onChange={e=>setModel(e.target.value)}>{models.map(m=><option key={m.id} value={m.id}>{m.name}</option>)}</select></label><div className="setup-buttons"><button onClick={onBack}>← BACK</button><button onClick={onTutorial}>LEARN FIRST</button><button className="gold" onClick={onStart}>START RACE 🏁</button></div></section></div>
+}

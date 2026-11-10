@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges">
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#73b9ee"/><stop offset="1" stop-color="#c5e7ee"/></linearGradient>
+ <linearGradient id="turf" x2="0" y2="1"><stop stop-color="#78c765"/><stop offset="1" stop-color="#3c9657"/></linearGradient>
+ <linearGradient id="track" x2="0" y2="1"><stop stop-color="#d8a56c"/><stop offset="1" stop-color="#a96c48"/></linearGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<!-- Clouds and distant hills -->
+<g fill="#f3fbf7"><path d="M170 145h74v-24h66v24h52v30H170zM650 105h68V82h76v23h58v28H650zM1150 158h66v-22h77v22h59v29h-202z"/></g>
+<path d="M0 430Q210 325 440 404T850 390T1240 408T1600 365V900H0z" fill="#73b96d"/>
+<path d="M0 492Q260 395 500 465T940 435T1320 472T1600 430V900H0z" fill="#55a85b"/>
+<!-- Distant clubhouse -->
+<g>
+ <path d="M1010 385V280h218v105z" fill="#f4dcaa"/>
+ <path d="M985 286l133-92 133 92z" fill="#536b91"/>
+ <rect x="1045" y="310" width="38" height="50" fill="#87bad0"/>
+ <rect x="1100" y="310" width="38" height="50" fill="#87bad0"/>
+ <rect x="1155" y="310" width="38" height="50" fill="#87bad0"/>
+ <path d="M1085 385v-34h47v34z" fill="#90613d"/>
+</g>
+<!-- Orchard trees at the edge of the paddock -->
+<g>
+ <path d="M115 442h35V265h-35zM1375 450h36V248h-36z" fill="#785238"/>
+ <path d="M35 315h190v-98H35zM72 250h150v-93H72zM1320 320h228v-98h-228zM1365 247h178v-97h-178z" fill="#3d9655"/>
+ <path d="M54 285h152v-62H54zM1344 288h178v-63h-178z" fill="#62b55b"/>
+</g>
+<!-- Open turf -->
+<path d="M0 490Q300 454 600 487T1200 480T1600 470V900H0z" fill="url(#turf)"/>
+<!-- Far rail and evenly spaced fence posts -->
+<path d="M0 555H1600M0 583H1600" stroke="#fff4dd" stroke-width="12" opacity=".96"/>
+<path d="M90 535v70M300 535v70M510 535v70M720 535v70M930 535v70M1140 535v70M1350 535v70M1560 535v70" stroke="#f7e9c9" stroke-width="13"/>
+<path d="M0 617Q350 590 690 614T1320 606T1600 598" fill="none" stroke="#348b50" stroke-width="12" opacity=".55"/>
+<!-- Curving racecourse with painted lane edge -->
+<path d="M0 706Q330 625 660 694T1270 673T1600 699V900H0z" fill="url(#track)"/>
+<path d="M0 726Q330 647 660 716T1270 695T1600 721" fill="none" stroke="#f2d19a" stroke-width="17"/>
+<path d="M0 828Q320 748 680 817T1290 798T1600 824" fill="none" stroke="#e9c38b" stroke-width="9" opacity=".76"/>
+<!-- Small flower patches along the turf edge -->
+<g shape-rendering="crispEdges">
+ <path d="M228 651h13v13h-13zM252 665h10v10h-10zM375 630h12v12h-12zM1360 645h13v13h-13zM1400 662h11v11h-11zM1510 627h12v12h-12z" fill="#f5a3c2"/>
+ <path d="M275 633h9v9h-9zM405 659h10v10h-10zM1320 673h9v9h-9zM1460 635h10v10h-10z" fill="#fff0a5"/>
+</g>
+</svg>

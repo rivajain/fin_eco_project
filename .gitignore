@@ -1,0 +1,5 @@
+fin_eco_project/node_modules
+dist/
+.env.example
+.venv/
+__pycache__/

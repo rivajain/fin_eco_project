@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330">
+<defs><style>
+.t{font-family:Arial,sans-serif;fill:#f5f7fb}.h{font-family:Arial,sans-serif;font-weight:700;fill:#ffdc42}.s{font-family:Arial,sans-serif;fill:#b9cce3;font-size:16px}.box{fill:#102541;stroke:#f2c936;stroke-width:2}.arr{stroke:#f2d33e;stroke-width:4;fill:none;stroke-linecap:square}
+</style></defs>
+<rect width="1200" height="330" fill="#08172d"/>
+<text x="40" y="42" class="h" font-size="21">THE FORECASTING HORSERACE · GAME FLOW</text>
+<g>
+<rect x="35" y="85" width="200" height="175" rx="9" class="box"/><text x="135" y="120" text-anchor="middle" class="h" font-size="17">1 · Choose</text><text x="135" y="153" text-anchor="middle" class="t" font-size="16">Stock / index</text><text x="135" y="180" text-anchor="middle" class="t" font-size="16">Forecast horizon</text><text x="135" y="207" text-anchor="middle" class="t" font-size="16">Window + scheme</text>
+<rect x="275" y="85" width="200" height="175" rx="9" class="box"/><text x="375" y="120" text-anchor="middle" class="h" font-size="17">2 · Tune</text><text x="375" y="153" text-anchor="middle" class="t" font-size="16">OLS lag weights</text><text x="375" y="180" text-anchor="middle" class="t" font-size="16">ARIMA p / d / q</text><text x="375" y="207" text-anchor="middle" class="t" font-size="16">Baseline stays fixed</text>
+<rect x="515" y="85" width="200" height="175" rx="9" class="box"/><text x="615" y="120" text-anchor="middle" class="h" font-size="17">3 · ESG note</text><text x="615" y="153" text-anchor="middle" class="t" font-size="16">Context pop-up</text><text x="615" y="180" text-anchor="middle" class="t" font-size="16">Source + timestamp</text><text x="615" y="207" text-anchor="middle" class="t" font-size="16">Not a return signal</text>
+<rect x="755" y="85" width="200" height="175" rx="9" class="box"/><text x="855" y="120" text-anchor="middle" class="h" font-size="17">4 · Predict + bet</text><text x="855" y="153" text-anchor="middle" class="t" font-size="16">Lock forecast</text><text x="855" y="180" text-anchor="middle" class="t" font-size="16">Choose model horse</text><text x="855" y="207" text-anchor="middle" class="t" font-size="16">Stake game credits</text>
+<rect x="995" y="85" width="170" height="175" rx="9" class="box"/><text x="1080" y="120" text-anchor="middle" class="h" font-size="17">5 · Reveal</text><text x="1080" y="153" text-anchor="middle" class="t" font-size="16">Race animation</text><text x="1080" y="180" text-anchor="middle" class="t" font-size="16">Closest mean wins</text><text x="1080" y="207" text-anchor="middle" class="t" font-size="16">Update stats</text>
+<path d="M235 170 H267 M475 170 H507 M715 170 H747 M955 170 H987" class="arr"/><path d="M258 162 L267 170 L258 178 M498 162 L507 170 L498 178 M738 162 L747 170 L738 178 M978 162 L987 170 L978 178" fill="none" stroke="#f2d33e" stroke-width="4"/>
+</g>
+<text x="40" y="300" class="s">Method guardrail: out-of-sample observations are never used to fit or tune forecasts. GARCH is evaluated in the separate volatility race.</text>
+</svg>

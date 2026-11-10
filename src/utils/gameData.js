@@ -1,0 +1,20 @@
+export const MODELS = [
+ {id:"ols",name:"Linear Racer · OLS",color:"#34e08b",label:"LINEAR RACER",subtitle:"Market-linked linear model",eq:"r_asset,t = α + β₁r_market,t + β₂X_t + ε_t",explain:"OLS estimates how the asset's return relates to external variables available at the forecast origin—such as the S&P 500 return or a rate series. Coefficients are fitted on the training window.",game:"Its horse represents a linear, explainable relationship. In the current demo, the available OLS implementation may use lagged returns unless market-factor data is supplied."},
+ {id:"arima",name:"Momentum Racer · ARIMA",color:"#54bfff",label:"MOMENTUM RACER",subtitle:"Own-history time-series model",eq:"ARIMA(p,d,q)",explain:"ARIMA uses the asset's own past returns and past forecast errors. It captures linear serial patterns without external factors. Model order should be selected on training data only.",game:"The blue horse is the asset-history-only forecast. Its one-step mean forecast is scored against the realized return."},
+ {id:"hybrid",name:"Hybrid Racer · ARIMA + GARCH",color:"#ffb44b",label:"HYBRID RISK RACER",subtitle:"Mean forecast plus volatility envelope",eq:"Mean: ARIMA · Variance: GARCH(1,1)",explain:"ARIMA supplies the direction/conditional mean forecast; GARCH models conditional variance and volatility clustering. It produces a risk envelope around the mean—not a guaranteed direction.",game:"The hybrid horse uses the ARIMA mean forecast. GARCH volatility is shown alongside it and evaluated separately using a variance loss such as QLIKE."}
+];
+export const API_BASE=import.meta.env.VITE_API_URL||"http://localhost:8000";
+export const STOCKS=[["AAPL","Apple"],["MSFT","Microsoft"],["NVDA","NVIDIA"],["AMZN","Amazon"],["GOOGL","Alphabet"],["META","Meta"],["TSLA","Tesla"],["AVGO","Broadcom"],["JPM","JPMorgan"],["V","Visa"],["LLY","Eli Lilly"],["WMT","Walmart"],["XOM","Exxon Mobil"],["COST","Costco"],["NFLX","Netflix"],["AMD","AMD"],["ORCL","Oracle"],["CRM","Salesforce"],["ADBE","Adobe"],["INTC","Intel"],["^GSPC","S&P 500"],["^IXIC","NASDAQ"]];
+export const TUTORIAL_STEPS = (ticker, model) => {
+ const chosen = MODELS.find(m=>m.id===model) || MODELS[1];
+ return [
+  {screen:1,title:"Welcome to the Forecasting Horserace",text:`I’m Coach Pixel! Welcome to the track. We’ll use econometric models to forecast ${ticker} returns, then compare their forecasts with what actually happened.`},
+  {screen:2,title:"Step 1: Choose a Ticker",text:`You selected ${ticker}. Choose one of your Bloomberg assets with at least five years of daily data. The ticker determines the series we forecast and evaluate.`},
+  {screen:3,title:"Step 2: Set Forecast Settings",text:"Before racing, set the evaluation window, forecast horizon, and rolling or expanding estimation scheme. The test window must contain at least 250 out-of-sample forecast origins."},
+  {screen:4,title:"Step 3: Meet Your Models",text:"Three model horses compete in the mean-return race: OLS uses external factors, ARIMA uses the asset’s own history, and ARIMA-GARCH combines a mean forecast with a volatility estimate."},
+  {screen:5,title:`Model Explainer: ${chosen.name}`,text:`${chosen.subtitle}. ${chosen.explain} This is the model you chose to learn about first; the other contenders will still race.`},
+  {screen:6,title:"The Race: Out-of-Sample Forecasts",text:"At every forecast origin, each model only sees information available up to that point. The naive zero-return benchmark runs alongside the models. No future data is allowed."},
+  {screen:7,title:"Round Result: Forecast vs Actual",text:"After each forecast, compare the predicted return with the realized return. The absolute error is shown, but the overall winner is decided from the full out-of-sample evaluation—not a single round."},
+  {screen:8,title:"Final Results: Metrics & Tests",text:"Review RMSE and MAE for mean forecasts, Variance RMSE and QLIKE for volatility forecasts, benchmark loss ratios, Diebold–Mariano tests, forecasts versus actuals, and cumulative loss differentials."}
+ ];
+};

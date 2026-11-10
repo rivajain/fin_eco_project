@@ -1,0 +1,2 @@
+export const initialSeries=(n=78)=>{let x=31,v=0,a=[];for(let i=0;i<n;i++){x=(x*1664525+1013904223)>>>0;let z=(x/4294967296-.5)*2;v=v*.63+z*.78+Math.sin(i*.16)*.12;a.push(+v.toFixed(3));}return a;};
+export function calc(s){let a=s.at(-1),b=s.at(-2),c=s.at(-3);let variance=s.slice(-20).reduce((t,v)=>t+v*v,0)/20;return {ols:+(.46*a+.23*b-.05*c).toFixed(3),arima:+(.58*a+.2*b+.06*c).toFixed(3),naive:0,garch:+(.86*variance+.14*a*a).toFixed(3)};}
