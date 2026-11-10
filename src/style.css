@@ -168,6 +168,71 @@
   .footer { display: none !important; }
 }
 
+@media (min-width: 1001px) {
+  html, body, #root { height: 100%; }
+  .play-shell { height: 100vh; height: 100dvh; min-height: 0; overflow: hidden; }
+  .topbar { flex: 0 0 auto; }
+  .play-content {
+    height: calc(100vh - 58px);
+    height: calc(100dvh - 58px);
+    min-height: 0;
+    grid-template-columns: 150px minmax(0, 1fr) 245px;
+    grid-template-rows: clamp(150px, 28vh, 230px) minmax(0, 1fr);
+    overflow: hidden;
+  }
+  .play-content .left-sidebar {
+    position: static;
+    grid-row: 1 / span 2 !important;
+    height: 100%;
+    min-height: 0;
+  }
+  .play-content .race-main {
+    grid-row: 1;
+    height: clamp(150px, 30vh, 230px);
+    min-height: 0;
+  }
+  .play-content .game-layout {
+    grid-row: 2;
+    height: 100%;
+    min-height: 0;
+    grid-template-columns: minmax(0, .6fr) minmax(0, .55fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    overflow: hidden;
+  }
+  .play-content .game-layout > .game-panel:nth-child(n + 3) { display: none; }
+  .game-panel { min-height: 0; overflow: hidden; }
+  .play-content .game-layout .evaluation-setup { display: none !important; }
+  .play-content .right-rail {
+    grid-column: 3;
+    grid-row: 1;
+    min-width: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: min-content min-content minmax(0, 1fr);
+    min-height: 0;
+    overflow: hidden;
+  }
+  .leaderboard, .market-panel { grid-column: 1 / -1; }
+  .progress-panel { grid-column: 1; }
+  .recent-panel { grid-column: 2; }
+  .side-panel { min-height: 0; padding: 6px; }
+  .side-panel h2 { font-size: 12px; margin-bottom: 4px; }
+  .leader-header, .leader-item { padding: 3px 5px; }
+  .leader-item { min-height: 25px; font-size: 12px; }
+  .leader-item img { width: 22px; height: 19px; }
+  .leader-item strong { font-size: 15px; }
+  .progress-panel { gap: 5px; }
+  .recent-row { padding: 3px 0; font-size: 10px; }
+  .market-panel { min-height: 0; overflow: hidden; display: grid; grid-template-rows: min-content minmax(0, 1fr) min-content; }
+  .market-svg { height: clamp(48px, 8vh, 62px) !important; min-height: 0; margin-top: 2px; }
+  .chart-months { font-size: 11px; }
+}
+
+@media (min-width: 1001px) and (max-width: 1100px) {
+  .play-content { grid-template-columns: 130px minmax(0, 1fr) 210px; }
+  .play-content .game-layout { grid-template-columns: minmax(0, .65fr) minmax(0, .58fr) minmax(0, .7fr); }
+  .play-content .side-nav { gap: 4px; padding: 6px 3px; font-size: 10px; }
+}
+
 .recent-empty{padding:8px 4px;color:#adc4df;font-size:12px}
 
 .history-dashboard{margin:12px 0 18px;background:#0b1c34;border:2px solid #345578;border-radius:7px;padding:12px;min-width:0}
@@ -502,4 +567,109 @@ html,body,#root{background:#06142a}
   .coach-speech{width:64%!important}
   .coach-speech h2{font-size:8px!important;line-height:1.8;margin-bottom:5px}
   .coach-speech p{font-size:8px!important;line-height:1.8!important}
+}
+
+@media (min-width: 1001px) {
+  .play-shell { height: 100vh; height: 100dvh; min-height: 0; overflow: hidden; }
+  .play-content {
+    height: calc(100vh - 58px);
+    height: calc(100dvh - 58px);
+    min-height: 0;
+    grid-template-columns: 150px minmax(0, 1fr) 245px !important;
+    grid-template-rows: clamp(150px, 27vh, 220px) minmax(0, 1fr);
+    overflow: hidden;
+  }
+  .play-content .left-sidebar {
+    grid-column: 1;
+    grid-row: 1 / span 2 !important;
+    position: static;
+    height: 100%;
+    min-height: 0;
+  }
+  .play-content .race-main {
+    grid-column: 2;
+    grid-row: 1;
+    height: clamp(150px, 27vh, 220px) !important;
+    min-height: 0;
+    background-size: 100% 100% !important;
+  }
+  .play-content .game-layout {
+    grid-column: 2;
+    grid-row: 2;
+    height: 100%;
+    min-height: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: minmax(0, 1fr);
+    overflow: hidden;
+  }
+  .play-content .game-layout > .game-panel:nth-child(n + 3) { display: none; }
+  .play-content .game-panel { min-height: 0; overflow: hidden; }
+  .play-content .evaluation-setup { display: none !important; }
+  .play-content .right-rail {
+    grid-column: 3 !important;
+    grid-row: 1 / span 2 !important;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: min-content min-content min-content minmax(0, 1fr);
+    gap: 6px;
+    overflow: hidden;
+  }
+  .play-content .leaderboard, .play-content .market-panel { grid-column: 1 !important; }
+  .play-content .progress-panel, .play-content .recent-panel { grid-column: 1 !important; }
+  .play-content .side-panel { min-width: 0; min-height: 0; padding: 6px; }
+  .play-content .side-panel h2 { font-size: 12px; margin: 0 0 4px; }
+  .play-content .leader-header, .play-content .leader-item {
+    grid-template-columns: 18px 20px minmax(0, 1fr) 26px;
+    gap: 4px;
+    padding: 3px 4px;
+  }
+  .play-content .leader-header span:nth-child(2) { grid-column: 2 / 4; }
+  .play-content .leader-item { min-height: 23px; font-size: 10px; }
+  .play-content .leader-item b { overflow-wrap: anywhere; }
+  .play-content .leader-item img { width: 20px; height: 18px; }
+  .play-content .leader-item strong { font-size: 13px; }
+  .play-content .progress-panel { gap: 5px; }
+  .play-content .recent-row { padding: 3px 0; font-size: 10px; }
+  .play-content .market-panel {
+    display: grid;
+    grid-template-rows: min-content minmax(0, 1fr) minmax(0, 1fr);
+    overflow: hidden;
+  }
+  .market-chart-block { display: grid; grid-template-rows: min-content minmax(0, 1fr); min-height: 0; gap: 2px; }
+  .market-chart-block > strong { font-size: 10px; color: #c7d9ec; }
+  .market-chart-block .history-chart, .market-chart-block .market-svg {
+    width: 100%;
+    height: 100% !important;
+    max-height: none;
+    min-height: 0;
+    margin: 0;
+  }
+  .market-chart-block .chart-empty { margin: 0; font-size: 10px; color: #abc1dc; }
+  .play-content .race-info {
+    display: grid !important;
+    top: 7px;
+    left: 8px;
+    min-width: 0;
+    gap: 2px;
+    padding: 5px 7px;
+    border-width: 1px;
+  }
+  .play-content .race-info b { font-size: 11px; }
+  .play-content .race-info span, .play-content .race-info small { font-size: 10px; }
+  .play-content .round-sign { display: none !important; }
+  .play-content .track-runners { top: 39%; height: 55%; }
+  .play-content .race-horse { width: 104px; margin-left: -52px; bottom: 4px; }
+  .play-content .race-horse img { width: 98px; height: 66px; }
+  .play-content .horse-label { font-size: 6px; padding: 3px 4px; }
+  .play-content .track-runners .horse-ols { transform: translateY(14px); }
+  .play-content .track-runners .horse-arima { transform: translateY(5px); }
+  .play-content .track-runners .horse-hybrid { transform: translateY(-5px); }
+  .play-content .track-runners .horse-ols_garch { transform: translateY(-14px); }
+}
+
+@media (min-width: 1001px) and (max-width: 1100px) {
+  .play-content { grid-template-columns: 130px minmax(0, 1fr) 210px !important; }
+  .play-content .side-nav { gap: 4px; padding: 6px 3px; font-size: 10px; }
 }
