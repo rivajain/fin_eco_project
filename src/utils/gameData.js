@@ -8,7 +8,7 @@ export const HORSE_IMAGES = {
  ols:"/pixel/reference-horse-ols.png",
  arima:"/pixel/reference-horse-arima.png",
  hybrid:"/pixel/reference-horse-garch.png",
- ols_garch:"/pixel/horse-ols_garch.svg",
+ ols_garch:"/pixel/reference-horse-you.png",
  you:"/pixel/reference-horse-you.png",
  naive:"/pixel/reference-horse-naive.png",
  garch:"/pixel/reference-horse-garch.png"
