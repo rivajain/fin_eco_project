@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-11-25T14:50:03+00:00",
+  "window": [
+    "2021-10-01",
+    "2026-09-30"
+  ],
+  "sources": {
+    "wti": "FRED DCOILWTICO",
+    "usd_broad": "FRED DTWEXBGS",
+    "real_yield_10y": "FRED DFII10",
+    "vix": "FRED VIXCLS",
+    "brent": "FRED DCOILBRENTEU",
+    "gold": "Yahoo Finance GC=F, close"
+  },
+  "returns": "100 * ln(P_t / P_t-1), percent",
+  "n_returns": {
+    "wti_ret": 1246,
+    "gold_ret": 1256
+  }
+}

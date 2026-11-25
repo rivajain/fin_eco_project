@@ -1,0 +1,167 @@
+{
+  "model": "ARIMA-GARCH(1,1), two-step",
+  "asset": "wti",
+  "units": "percent log returns; variance in percent^2",
+  "design": {
+    "scheme": "expanding",
+    "window": null,
+    "eval_size": 250,
+    "horizon": 1,
+    "n_forecasts": 250,
+    "first_target": "2025-09-30",
+    "last_target": "2026-09-30"
+  },
+  "spec": {
+    "order": [
+      0,
+      0,
+      0
+    ],
+    "dist": "t",
+    "criterion": "bic",
+    "arima_grid": [
+      {
+        "order": [
+          0,
+          0,
+          0
+        ],
+        "aic": 4525.048544126078,
+        "bic": 4534.856038641247
+      },
+      {
+        "order": [
+          0,
+          0,
+          1
+        ],
+        "aic": 4525.407998433138,
+        "bic": 4540.119240205892
+      },
+      {
+        "order": [
+          1,
+          0,
+          0
+        ],
+        "aic": 4525.537270298442,
+        "bic": 4540.248512071196
+      },
+      {
+        "order": [
+          2,
+          0,
+          1
+        ],
+        "aic": 4518.037425957344,
+        "bic": 4542.556162245267
+      },
+      {
+        "order": [
+          1,
+          0,
+          2
+        ],
+        "aic": 4518.427377420809,
+        "bic": 4542.946113708732
+      },
+      {
+        "order": [
+          2,
+          0,
+          0
+        ],
+        "aic": 4525.743604500424,
+        "bic": 4545.358593530763
+      },
+      {
+        "order": [
+          0,
+          0,
+          2
+        ],
+        "aic": 4526.138578266555,
+        "bic": 4545.753567296893
+      },
+      {
+        "order": [
+          1,
+          0,
+          1
+        ],
+        "aic": 4527.090012668399,
+        "bic": 4546.705001698738
+      },
+      {
+        "order": [
+          2,
+          0,
+          2
+        ],
+        "aic": 4524.450379332855,
+        "bic": 4553.872862878363
+      }
+    ],
+    "dist_aic": {
+      "normal": 4415.084775098017,
+      "t": 4397.038973795856
+    }
+  },
+  "diagnostics_training_window": {
+    "adf_returns": {
+      "stat": -15.289838529524124,
+      "p_value": 4.458740069437522e-28
+    },
+    "arima_params": {
+      "const": -0.016849551586343235,
+      "sigma2": 5.481177730607121
+    },
+    "garch_params": {
+      "omega": 0.1890421272683877,
+      "alpha[1]": 0.09174266740429078,
+      "beta[1]": 0.8747476405365809,
+      "nu": 10.92156784257379
+    },
+    "persistence_alpha_plus_beta": 0.9664903079408718,
+    "ljung_box_10_arima_resid_p": 0.004209134163083439,
+    "ljung_box_10_std_resid_p": 0.43236058644973335,
+    "ljung_box_10_sq_std_resid_p": 0.5963029390407508,
+    "arch_lm_5_before_garch_p": 4.108052206096758e-15,
+    "arch_lm_5_after_garch_p": 0.552252242114732,
+    "jarque_bera_std_resid_p": 1.7682862730881826e-24,
+    "arima_aic": 4525.048544126078,
+    "garch_aic": 4397.038973795856
+  },
+  "scores": {
+    "mean_race": {
+      "RMSE": 3.658650331435865,
+      "MAE": 2.4956865476297527,
+      "RMSE_naive": 3.6571642603693655,
+      "MAE_naive": 2.495015423323212,
+      "RMSE_ratio_vs_naive": 1.0004063451791334,
+      "MAE_ratio_vs_naive": 1.0002689860352234,
+      "directional_accuracy_pct": 51.6,
+      "DM_vs_naive_squared_error": {
+        "statistic": 1.1279868927765657,
+        "p_value": 0.2593254546718553,
+        "mean_loss_difference": 0.010871820392756191,
+        "n": 250
+      }
+    },
+    "volatility_race": {
+      "variance_RMSE": 32.43368585327672,
+      "QLIKE": 3.339976813751263,
+      "variance_RMSE_hist": 33.83995509824636,
+      "QLIKE_hist": 3.9787260987459097,
+      "variance_RMSE_ratio_vs_hist": 0.9584435250907732,
+      "QLIKE_minus_hist": -0.6387492849946468,
+      "QLIKE_ratio_vs_hist": 0.8394588445794297,
+      "DM_vs_hist_QLIKE": {
+        "statistic": -2.89872186601123,
+        "p_value": 0.0037468710997206056,
+        "mean_loss_difference": -0.638749284994647,
+        "n": 250
+      }
+    }
+  }
+}
