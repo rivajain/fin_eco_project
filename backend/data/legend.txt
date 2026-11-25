@@ -1,0 +1,9 @@
+VIXCLS = CBOE Volatility Index
+DFII10 = Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis, Inflation-Indexed
+DCOILWTICO = Crude Oil Prices: West Texas Intermediate (WTI) - Cushing, Oklahoma
+DCOILBRENTEU = Crude Oil Prices: Brent - Europe
+DTWEXBGS = Nominal Broad U.S. Dollar Index
+
+data from = 1 Jan 2015 to 31 Oct 2026
+
+We use data from 

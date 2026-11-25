@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-11-20T18:25:46+00:00",
+  "window": [
+    "2021-10-01",
+    "2026-09-30"
+  ],
+  "sources": {
+    "wti": "FRED DCOILWTICO",
+    "usd_broad": "FRED DTWEXBGS",
+    "real_yield_10y": "FRED DFII10",
+    "vix": "FRED VIXCLS",
+    "brent": "FRED DCOILBRENTEU"
+  },
+  "returns": "100 * ln(P_t / P_t-1), percent",
+  "n_returns": 1246
+}
